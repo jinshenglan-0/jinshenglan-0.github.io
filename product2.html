@@ -1,0 +1,384 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleJeaHyPets - Premium Pet Suppliestitle
+    script src=httpscdn.tailwindcss.comscript
+    link href=httpscdn.jsdelivr.netnpmfont-awesome@4.7.0cssfont-awesome.min.css rel=stylesheet
+    script
+        tailwind.config = {
+            theme {
+                extend {
+                    colors {
+                        primary '#2E7D32',  Natural green as primary color, conveying health and vitality
+                        secondary '#FF9800',  Warm orange as secondary color, conveying friendliness and energy
+                        dark '#1A202C',
+                        light '#F7FAFC'
+                    },
+                    fontFamily {
+                        sans ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    script
+    style type=texttailwindcss
+        @layer utilities {
+            .content-auto {
+                content-visibility auto;
+            }
+            .text-shadow {
+                text-shadow 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition all 0.3s ease;
+            }
+            .card-hoverhover {
+                transform translateY(-5px);
+            }
+        }
+    style
+head
+body class=bg-gray-50 text-gray-800 font-sans
+    !-- Top Navigation Bar --
+    header class=bg-dark text-white shadow-md
+        div class=container mx-auto px-4
+            div class=flex justify-between items-center py-4
+                !-- Brand Logo --
+                a href=# class=flex items-center space-x-2
+                    i class=fa fa-paw text-2xl text-secondaryi
+                    span class=text-xl font-bold tracking-tightPawParadisespan
+                a
+                
+                !-- Desktop Navigation Menu --
+                nav class=hidden mdflex space-x-8
+                    a href=# class=hovertext-secondary transition-colors duration-300Homea
+                    a href=#products class=hovertext-secondary transition-colors duration-300 font-semibold border-b-2 border-secondaryProductsa
+                    a href=#services class=hovertext-secondary transition-colors duration-300Servicesa
+                    a href=#about class=hovertext-secondary transition-colors duration-300About Usa
+                    a href=#contact class=hovertext-secondary transition-colors duration-300Contacta
+                nav
+                
+                !-- Search and Shopping Cart Icons --
+                div class=flex items-center space-x-4
+                    button class=hovertext-secondary transition-colors duration-300
+                        i class=fa fa-search text-lgi
+                    button
+                    button class=hovertext-secondary transition-colors duration-300 relative
+                        i class=fa fa-shopping-bag text-lgi
+                        span class=absolute -top-2 -right-2 bg-secondary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center3span
+                    button
+                    
+                    !-- Mobile Menu Button --
+                    button class=mdhidden hovertext-secondary transition-colors duration-300 id=mobile-menu-button
+                        i class=fa fa-bars text-xli
+                    button
+                div
+            div
+            
+            !-- Mobile Navigation Menu --
+            div class=mdhidden hidden pb-4 id=mobile-menu
+                div class=flex flex-col space-y-3
+                    a href=# class=hovertext-secondary transition-colors duration-300Homea
+                    a href=#products class=hovertext-secondary transition-colors duration-300 font-semiboldProductsa
+                    a href=#services class=hovertext-secondary transition-colors duration-300Servicesa
+                    a href=#about class=hovertext-secondary transition-colors duration-300About Usa
+                    a href=#contact class=hovertext-secondary transition-colors duration-300Contacta
+                div
+            div
+        div
+    header
+    !-- Page Title Section --
+    section class=bg-gradient-to-r from-primary to-primary80 text-white py-12
+        div class=container mx-auto px-4
+            h1 class=text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-shadowOur Productsh1
+            p class=mt-2 text-white90 max-w-2xlPremium quality supplies for your beloved pets. From food to toys, we have everything your furry friends need.p
+        div
+    section
+    !-- Main Content Area --
+    main class=container mx-auto px-4 py-8
+        div class=flex flex-col mdflex-row gap-8
+            !-- Left Category Menu --
+            aside class=mdw-14 lgw-15
+                !-- Search Box --
+                div class=mb-8
+                    div class=relative
+                        input 
+                            type=text 
+                            placeholder=Search products... 
+                            class=w-full px-4 py-2 rounded-lg border border-gray-300 focusoutline-none focusring-2 focusring-primary50 focusborder-primary transition-all
+                        
+                        button class=absolute right-3 top-12 transform -translate-y-12 text-gray-400 hovertext-primary transition-colors
+                            i class=fa fa-searchi
+                        button
+                    div
+                div
+                
+                !-- Product Categories --
+                div class=bg-white rounded-xl shadow-sm p-6 mb-8
+                    h3 class=text-lg font-bold mb-4 pb-2 border-b border-gray-100Categoriesh3
+                    ul class=space-y-3
+                        li
+                            a href=# class=flex justify-between items-center hovertext-primary transition-colors
+                                spanFood & Treatsspan
+                                i class=fa fa-chevron-right text-xs text-gray-400i
+                            a
+                        li
+                        li
+                            a href=# class=flex justify-between items-center hovertext-primary transition-colors
+                                spanToysspan
+                                i class=fa fa-chevron-right text-xs text-gray-400i
+                            a
+                        li
+                        li
+                            a href=# class=flex justify-between items-center hovertext-primary transition-colors
+                                spanAccessoriesspan
+                                i class=fa fa-chevron-right text-xs text-gray-400i
+                            a
+                        li
+                        li
+                            a href=# class=flex justify-between items-center hovertext-primary transition-colors
+                                spanGrooming Suppliesspan
+                                i class=fa fa-chevron-right text-xs text-gray-400i
+                            a
+                        li
+                        li
+                            a href=# class=flex justify-between items-center hovertext-primary transition-colors
+                                spanPet Beds & Furniturespan
+                                i class=fa fa-chevron-right text-xs text-gray-400i
+                            a
+                        li
+                        li
+                            a href=# class=flex justify-between items-center hovertext-primary transition-colors
+                                spanHealth & Wellnessspan
+                                i class=fa fa-chevron-right text-xs text-gray-400i
+                            a
+                        li
+                    ul
+                div
+                
+                !-- Contact & Consultation --
+                div class=bg-gradient-to-br from-secondary to-secondary80 rounded-xl shadow-md p-6 text-white
+                    h3 class=text-lg font-bold mb-3Need Helph3
+                    p class=text-sm text-white90 mb-4Our pet experts are ready to assist you with any questions.p
+                    button class=w-full bg-white text-secondary font-medium py-2 rounded-lg hoverbg-opacity-90 transition-colors duration-300 flex items-center justify-center
+                        i class=fa fa-comments mr-2i Live Chat
+                    button
+                div
+            aside
+            
+            !-- Right Product Display --
+            div class=mdw-34 lgw-45
+                !-- Sorting & Filtering --
+                div class=flex flex-col smflex-row justify-between items-start smitems-center mb-8 gap-4
+                    div
+                        h2 class=text-2xl font-boldAll Productsh2
+                        p class=text-gray-500Showing 12 of 48 productsp
+                    div
+                    div class=flex items-center gap-4
+                        div class=relative
+                            select class=appearance-none bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-lg focusoutline-none focusring-2 focusring-primary50 focusborder-primary
+                                optionSort by Featuredoption
+                                optionPrice Low to Highoption
+                                optionPrice High to Lowoption
+                                optionNewest Firstoption
+                                optionBest Sellingoption
+                            select
+                            div class=pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700
+                                i class=fa fa-chevron-down text-xsi
+                            div
+                        div
+                        div class=flex border border-gray-300 rounded-lg overflow-hidden
+                            button class=bg-white p-2 hoverbg-gray-100 transition-colors
+                                i class=fa fa-th-largei
+                            button
+                            button class=bg-white p-2 hoverbg-gray-100 transition-colors
+                                i class=fa fa-listi
+                            button
+                        div
+                    div
+                div
+                
+                !-- Product Grid --
+                div class=grid grid-cols-1 smgrid-cols-2 lggrid-cols-3 gap-6
+                    !-- Product Card 1 --
+                    div class=bg-white rounded-xl shadow-sm overflow-hidden card-hover group
+                        div class=relative
+                            img src=httpspicsum.photosid237400300 alt=Premium dog food in a bag class=w-full h-56 object-cover
+                            span class=absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 roundedBESTSELLERspan
+                            button class=absolute top-3 right-3 bg-white rounded-full p-2 shadow-md opacity-0 group-hoveropacity-100 transition-opacity
+                                i class=fa fa-heart-o text-gray-600 hovertext-red-500 transition-colorsi
+                            button
+                        div
+                        div class=p-5
+                            div class=flex items-center text-yellow-400 text-xs mb-2
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-star-half-oi
+                                span class=text-gray-500 ml-1(42)span
+                            div
+                            h3 class=font-semibold text-lg mb-1Premium Dog Foodh3
+                            p class=text-gray-500 text-sm mb-3Nutritious blend for active dogsp
+                            div class=flex justify-between items-center
+                                span class=font-bold text-primary$34.99span
+                                button class=bg-primary10 text-primary px-3 py-1.5 rounded-lg text-sm font-medium hoverbg-primary hovertext-white transition-colors duration-300
+                                    Add to Cart
+                                button
+                            div
+                        div
+                    div
+                    
+                    !-- Product Card 2 --
+                    div class=bg-white rounded-xl shadow-sm overflow-hidden card-hover group
+                        div class=relative
+                            img src=httpspicsum.photosid169400300 alt=Interactive cat toy with feathers class=w-full h-56 object-cover
+                            span class=absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 roundedNEWspan
+                            button class=absolute top-3 right-3 bg-white rounded-full p-2 shadow-md opacity-0 group-hoveropacity-100 transition-opacity
+                                i class=fa fa-heart-o text-gray-600 hovertext-red-500 transition-colorsi
+                            button
+                        div
+                        div class=p-5
+                            div class=flex items-center text-yellow-400 text-xs mb-2
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-star-oi
+                                span class=text-gray-500 ml-1(18)span
+                            div
+                            h3 class=font-semibold text-lg mb-1Interactive Cat Toyh3
+                            p class=text-gray-500 text-sm mb-3Feather wand with bellp
+                            div class=flex justify-between items-center
+                                span class=font-bold text-primary$12.99span
+                                button class=bg-primary10 text-primary px-3 py-1.5 rounded-lg text-sm font-medium hoverbg-primary hovertext-white transition-colors duration-300
+                                    Add to Cart
+                                button
+                            div
+                        div
+                    div
+                    
+                    !-- Product Card 3 --
+                    div class=bg-white rounded-xl shadow-sm overflow-hidden card-hover group
+                        div class=relative
+                            img src=httpspicsum.photosid659400300 alt=Comfortable pet bed with pillow class=w-full h-56 object-cover
+                            button class=absolute top-3 right-3 bg-white rounded-full p-2 shadow-md opacity-0 group-hoveropacity-100 transition-opacity
+                                i class=fa fa-heart-o text-gray-600 hovertext-red-500 transition-colorsi
+                            button
+                        div
+                        div class=p-5
+                            div class=flex items-center text-yellow-400 text-xs mb-2
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                span class=text-gray-500 ml-1(56)span
+                            div
+                            h3 class=font-semibold text-lg mb-1Orthopedic Pet Bedh3
+                            p class=text-gray-500 text-sm mb-3Memory foam for joint supportp
+                            div class=flex justify-between items-center
+                                span class=font-bold text-primary$59.99span
+                                button class=bg-primary10 text-primary px-3 py-1.5 rounded-lg text-sm font-medium hoverbg-primary hovertext-white transition-colors duration-300
+                                    Add to Cart
+                                button
+                            div
+                        div
+                    div
+                    
+                    !-- Product Card 4 - New --
+                    div class=bg-white rounded-xl shadow-sm overflow-hidden card-hover group
+                        div class=relative
+                            img src=httpspicsum.photosid1025400300 alt=Dog collar with tag and leash class=w-full h-56 object-cover
+                            span class=absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 roundedSALEspan
+                            button class=absolute top-3 right-3 bg-white rounded-full p-2 shadow-md opacity-0 group-hoveropacity-100 transition-opacity
+                                i class=fa fa-heart-o text-gray-600 hovertext-red-500 transition-colorsi
+                            button
+                        div
+                        div class=p-5
+                            div class=flex items-center text-yellow-400 text-xs mb-2
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-star-oi
+                                span class=text-gray-500 ml-1(32)span
+                            div
+                            h3 class=font-semibold text-lg mb-1Leather Pet Collarh3
+                            p class=text-gray-500 text-sm mb-3Genuine leather with metal bucklep
+                            div class=flex justify-between items-center
+                                div
+                                    span class=font-bold text-primary$24.99span
+                                    span class=text-gray-400 line-through text-sm ml-2$34.99span
+                                div
+                                button class=bg-primary10 text-primary px-3 py-1.5 rounded-lg text-sm font-medium hoverbg-primary hovertext-white transition-colors duration-300
+                                    Add to Cart
+                                button
+                            div
+                        div
+                    div
+                    
+                    !-- Product Card 5 - New --
+                    div class=bg-white rounded-xl shadow-sm overflow-hidden card-hover group
+                        div class=relative
+                            img src=httpspicsum.photosid1062400300 alt=Cat litter box with scoop class=w-full h-56 object-cover
+                            button class=absolute top-3 right-3 bg-white rounded-full p-2 shadow-md opacity-0 group-hoveropacity-100 transition-opacity
+                                i class=fa fa-heart-o text-gray-600 hovertext-red-500 transition-colorsi
+                            button
+                        div
+                        div class=p-5
+                            div class=flex items-center text-yellow-400 text-xs mb-2
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-star-half-oi
+                                i class=fa fa-star-oi
+                                span class=text-gray-500 ml-1(27)span
+                            div
+                            h3 class=font-semibold text-lg mb-1Self-Cleaning Litter Boxh3
+                            p class=text-gray-500 text-sm mb-3Odor control with easy cleaningp
+                            div class=flex justify-between items-center
+                                span class=font-bold text-primary$89.99span
+                                button class=bg-primary10 text-primary px-3 py-1.5 rounded-lg text-sm font-medium hoverbg-primary hovertext-white transition-colors duration-300
+                                    Add to Cart
+                                button
+                            div
+                        div
+                    div
+                    
+                    !-- Product Card 6 - New --
+                    div class=bg-white rounded-xl shadow-sm overflow-hidden card-hover group
+                        div class=relative
+                            img src=httpspicsum.photosid200400300 alt=Pet grooming brush for dogs and cats class=w-full h-56 object-cover
+                            span class=absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 roundedNEWspan
+                            button class=absolute top-3 right-3 bg-white rounded-full p-2 shadow-md opacity-0 group-hoveropacity-100 transition-opacity
+                                i class=fa fa-heart-o text-gray-600 hovertext-red-500 transition-colorsi
+                            button
+                        div
+                        div class=p-5
+                            div class=flex items-center text-yellow-400 text-xs mb-2
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-stari
+                                i class=fa fa-star-half-oi
+                                span class=text-gray-500 ml-1(15)span
+                            div
+                            h3 class=font-semibold text-lg mb-1Slicker Grooming Brushh3
+                            p class=text-gray-500 text-sm mb-3For long and short haired petsp
+                            div class=flex justify-between items-center
+                                span class=font-bold text-primary$18.99span
+                                button class=bg-primary10 text-primary px-3 py-1.5 rounded-lg text-sm font-medium hoverbg-primary hovertext-white transition-colors duration-300
+                                    Add to Cart
+                                button
+                            div
+                        div
+                    div
+                div
+            div
+        div
+    main
+body
+html
